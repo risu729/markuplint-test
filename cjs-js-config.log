@@ -1,0 +1,400 @@
+npx markuplint --config markuplint.config.js --verbose test.html
+
+```markuplint.config.js
+const config = {
+  rules: {
+    doctype: true,
+  },
+};
+
+module.exports = config;
+```
+
+2023-04-30T15:15:40.986Z markuplint-cli Debug enable: markuplint-cli
+2023-04-30T15:15:40.987Z ml-core Debug enable: ml-core
+2023-04-30T15:15:40.988Z ml-core Debug enable: ml-core, markuplint-cli
+2023-04-30T15:15:40.995Z markuplint-cli File list: [ '/workspaces/markuplint-test/test.html' ]
+2023-04-30T15:15:40.995Z markuplint-cli Config: /workspaces/markuplint-test/markuplint.config.js
+2023-04-30T15:15:40.995Z markuplint-cli Fix option: false
+2023-04-30T15:15:40.996Z markuplint-cli:ml-engine exec: start
+2023-04-30T15:15:40.996Z markuplint-cli:ml-engine:config defaultConfigKey: N/A
+2023-04-30T15:15:41.001Z markuplint-cli:ml-engine:config configFilePathsFromTarget: /workspaces/markuplint-test/markuplint.config.js
+2023-04-30T15:15:41.001Z markuplint-cli:ml-engine:config option.config: N/A
+2023-04-30T15:15:41.001Z markuplint-cli:ml-engine:config defaultRecommended: N/A
+2023-04-30T15:15:41.002Z markuplint-cli:ml-engine:file Fetched Config files: Set(1) { '/workspaces/markuplint-test/markuplint.config.js' }
+2023-04-30T15:15:41.003Z markuplint-cli:ml-engine:file Resolved Config: { rules: { doctype: true } }
+2023-04-30T15:15:41.003Z markuplint-cli:ml-engine:file Resolved Plugins: []
+2023-04-30T15:15:41.003Z markuplint-cli:ml-engine:file Resolve Errors: []
+2023-04-30T15:15:41.004Z markuplint-cli:ml-engine:file Fetched Parser module: @markuplint/html-parser
+2023-04-30T15:15:41.004Z markuplint-cli:ml-engine:file Resolved ruleset: Ruleset { rules: { doctype: true }, nodeRules: [], childNodeRules: [] }
+2023-04-30T15:15:41.004Z markuplint-cli:ml-engine:file Resolved schemas: HTML Standard
+2023-04-30T15:15:41.114Z markuplint-cli:ml-engine:file Resolved rules: [
+  MLRule {
+    name: 'attr-duplication',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'attr-value-quotes',
+    defaultSeverity: 'warning',
+    defaultValue: 'double',
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'case-sensitive-attr-name',
+    defaultSeverity: 'warning',
+    defaultValue: 'lower',
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'case-sensitive-tag-name',
+    defaultSeverity: 'warning',
+    defaultValue: 'lower',
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'character-reference',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'class-naming',
+    defaultSeverity: 'warning',
+    defaultValue: null,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'deprecated-attr',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'deprecated-element',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'disallowed-element',
+    defaultSeverity: 'error',
+    defaultValue: [],
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'doctype',
+    defaultSeverity: 'error',
+    defaultValue: 'always',
+    defaultOptions: { denyObsoleteType: true }
+  },
+  MLRule {
+    name: 'end-tag',
+    defaultSeverity: 'warning',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'id-duplication',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'ineffective-attr',
+    defaultSeverity: 'warning',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'invalid-attr',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: {}
+  },
+  MLRule {
+    name: 'label-has-control',
+    defaultSeverity: 'warning',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'landmark-roles',
+    defaultSeverity: 'warning',
+    defaultValue: true,
+    defaultOptions: { ignoreRoles: [], labelEachArea: true }
+  },
+  MLRule {
+    name: 'no-boolean-attr-value',
+    defaultSeverity: 'warning',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'no-default-value',
+    defaultSeverity: 'warning',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'no-empty-palpable-content',
+    defaultSeverity: 'warning',
+    defaultValue: true,
+    defaultOptions: { extendsExposableElements: true, ignoreIfAriaBusy: true }
+  },
+  MLRule {
+    name: 'no-hard-code-id',
+    defaultSeverity: 'warning',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'no-refer-to-non-existent-id',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: { ariaVersion: '1.2', fragmentRefersNameAttr: false }
+  },
+  MLRule {
+    name: 'no-use-event-handler-attr',
+    defaultSeverity: 'warning',
+    defaultValue: true,
+    defaultOptions: {}
+  },
+  MLRule {
+    name: 'permitted-contents',
+    defaultSeverity: 'error',
+    defaultValue: [],
+    defaultOptions: { ignoreHasMutableChildren: true }
+  },
+  MLRule {
+    name: 'placeholder-label-option',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'require-accessible-name',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: { ariaVersion: '1.2' }
+  },
+  MLRule {
+    name: 'require-datetime',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: { langs: undefined }
+  },
+  MLRule {
+    name: 'required-attr',
+    defaultSeverity: 'error',
+    defaultValue: [],
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'required-element',
+    defaultSeverity: 'error',
+    defaultValue: [],
+    defaultOptions: { ignoreHasMutableContents: true }
+  },
+  MLRule {
+    name: 'required-h1',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: { 'expected-once': true, 'in-document-fragment': false }
+  },
+  MLRule {
+    name: 'use-list',
+    defaultSeverity: 'warning',
+    defaultValue: [
+      '•', '‣', '⁃',  '⁌', '⁍', '∙',
+      '○', '●', '◘',  '◦', '☙', '❥',
+      '❧', '⦾', '⦿',  '·', '·', '•',
+      '∙', '⋅', '・', '･', '-', '*',
+      '+'
+    ],
+    defaultOptions: { spaceNeededBullets: [Array] }
+  },
+  MLRule {
+    name: 'wai-aria',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: {
+      checkingValue: true,
+      checkingDeprecatedProps: true,
+      permittedAriaRoles: true,
+      checkingRequiredOwnedElements: true,
+      checkingPresentationalChildren: false,
+      checkingInteractionInHidden: false,
+      disallowSetImplicitRole: true,
+      disallowSetImplicitProps: true,
+      disallowDefaultValue: false,
+      version: '1.2'
+    }
+  }
+]
+2023-04-30T15:15:41.115Z markuplint-cli:ml-engine:file Loaded 31 rules: [
+  'attr-duplication',
+  'attr-value-quotes',
+  'case-sensitive-attr-name',
+  'case-sensitive-tag-name',
+  'character-reference',
+  'class-naming',
+  'deprecated-attr',
+  'deprecated-element',
+  'disallowed-element',
+  'doctype',
+  'end-tag',
+  'id-duplication',
+  'ineffective-attr',
+  'invalid-attr',
+  'label-has-control',
+  'landmark-roles',
+  'no-boolean-attr-value',
+  'no-default-value',
+  'no-empty-palpable-content',
+  'no-hard-code-id',
+  'no-refer-to-non-existent-id',
+  'no-use-event-handler-attr',
+  'permitted-contents',
+  'placeholder-label-option',
+  'require-accessible-name',
+  'require-datetime',
+  'required-attr',
+  'required-element',
+  'required-h1',
+  'use-list',
+  'wai-aria'
+]
+2023-04-30T15:15:41.116Z markuplint-cli:ml-engine:file Get source code
+2023-04-30T15:15:41.118Z markuplint-cli:ml-engine:file Source code path: /workspaces/markuplint-test/test.html
+2023-04-30T15:15:41.118Z markuplint-cli:ml-engine:file Source code size: 265byte
+2023-04-30T15:15:41.133Z ml-core:node-store Mapped: 57c0b95a-b18e-4776-8d77-6e5a59827db1 (html: "<html lang="en">")
+2023-04-30T15:15:41.134Z ml-core:node-store Mapped: 19e45a7f-b7d0-4c86-9e37-42f9357fb9e1 (lang: "lang="en"")
+2023-04-30T15:15:41.134Z ml-core:node-store Mapped: 36f5e40f-64bc-4329-b8b0-e6b6aab9e0b7 (#text: "⏎⏎")
+2023-04-30T15:15:41.134Z ml-core:node-store Mapped: 5d717bae-05ff-4b3d-8a8b-9dbf1c47cede (head: "<head>")
+2023-04-30T15:15:41.135Z ml-core:node-store Mapped: 1a17b62d-dfae-4df3-933f-4aef6c183be9 (#text: "⏎    ")
+2023-04-30T15:15:41.135Z ml-core:node-store Mapped: fab9dc4e-b801-4d16-9236-8c6c0d90eeac (meta: "<meta charset="UTF-8">")
+2023-04-30T15:15:41.135Z ml-core:node-store Mapped: 3e657af9-0317-4ab2-a3a7-aa62f5fe209a (charset: "charset="UTF-8"")
+2023-04-30T15:15:41.135Z ml-core:node-store Mapped: 8d4b99ba-0e1e-4e43-a231-44d8e472ac20 (#text: "⏎    ")
+2023-04-30T15:15:41.135Z ml-core:node-store Mapped: a8150afe-e15b-4f6a-86d9-80bac1365a1d (meta: "<meta name="viewport" content="width=device-width, initial-scale=1.0">")
+2023-04-30T15:15:41.135Z ml-core:node-store Mapped: e6dd672f-72e7-4f13-a8fc-1f994a9a01ad (name: "name="viewport"")
+2023-04-30T15:15:41.135Z ml-core:node-store Mapped: b1faa533-195b-4383-97ae-24d4627a0ec9 (content: "content="width=device-width, initial-scale=1.0"")
+2023-04-30T15:15:41.136Z ml-core:node-store Mapped: b5e59893-7e7f-4ccf-a25b-d7aa96021eed (#text: "⏎    ")
+2023-04-30T15:15:41.136Z ml-core:node-store Mapped: 9ac75d67-2108-4741-8227-efb52884c50d (meta: "<meta http-equiv="X-UA-Compatible" content="ie=edge">")
+2023-04-30T15:15:41.136Z ml-core:node-store Mapped: e3bf1464-5236-4acf-9493-27105d5ef757 (http-equiv: "http-equiv="X-UA-Compatible"")
+2023-04-30T15:15:41.136Z ml-core:node-store Mapped: de0a7007-d385-4e88-9b9c-5a3a4f96e7e5 (content: "content="ie=edge"")
+2023-04-30T15:15:41.136Z ml-core:node-store Mapped: fdab698a-e3b6-4805-9477-1765fe413b23 (#text: "⏎    ")
+2023-04-30T15:15:41.136Z ml-core:node-store Mapped: 48ee270f-85f2-43bf-b8b4-553d663ecd2f (title: "<title>")
+2023-04-30T15:15:41.136Z ml-core:node-store Mapped: 5ab4aae8-0c72-4075-b4eb-51012e2e8c46 (#text: "Document")
+2023-04-30T15:15:41.137Z ml-core:node-store Mapped: 46bce6bd-1fa3-40be-bd26-924fe0bb06e7 (#text: "⏎")
+2023-04-30T15:15:41.137Z ml-core:node-store Mapped: 7f7878db-ec3c-4f35-b2e6-4707f3e43d55 (#text: "⏎⏎")
+2023-04-30T15:15:41.137Z ml-core:node-store Mapped: 24a48f14-4501-449a-bcef-67f6640d4945 (body: "<body>")
+2023-04-30T15:15:41.137Z ml-core:node-store Mapped: 48c92752-9549-411d-a00a-80d113af945e (#text: "⏎    ")
+2023-04-30T15:15:41.137Z ml-core:node-store Mapped: b365e2f6-0837-4e83-b764-6179ab0ab36f (h2: "<h2>")
+2023-04-30T15:15:41.137Z ml-core:node-store Mapped: 2c1f16b7-ea29-4683-845a-d720904d7600 (#text: "Title")
+2023-04-30T15:15:41.137Z ml-core:node-store Mapped: 2808a9e2-7613-4db2-a899-35dc9f8e2fd9 (#text: "⏎")
+2023-04-30T15:15:41.137Z ml-core:node-store Mapped: 99ef7577-5f98-41df-83be-ddfa8854290d (#text: "⏎⏎")
+2023-04-30T15:15:41.137Z ml-core:node-store Mapped: 5c5737fb-a10b-4a2d-8abc-c5f8a7f4ae48 (#text: "⏎")
+2023-04-30T15:15:41.138Z ml-core:ml-dom:document Pretending: []
+2023-04-30T15:15:41.138Z ml-core:ml-dom:document Rule Mapping: [ 'doctype' ]
+2023-04-30T15:15:41.139Z ml-core:rule-mapper Set to #document from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:15:41.139Z ml-core:ml-dom:document Add rules to node <HTML>
+2023-04-30T15:15:41.139Z ml-core:rule-mapper Set to HTML from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:15:41.139Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:15:41.139Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:15:41.139Z ml-core:ml-dom:document Add rules to node <HEAD>
+2023-04-30T15:15:41.139Z ml-core:rule-mapper Set to HEAD from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:15:41.140Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:15:41.140Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:15:41.140Z ml-core:ml-dom:document Add rules to node <META>
+2023-04-30T15:15:41.140Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:15:41.140Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:15:41.140Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:15:41.140Z ml-core:ml-dom:document Add rules to node <META>
+2023-04-30T15:15:41.140Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:15:41.140Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:15:41.140Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:15:41.141Z ml-core:ml-dom:document Add rules to node <META>
+2023-04-30T15:15:41.141Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:15:41.141Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:15:41.141Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:15:41.141Z ml-core:ml-dom:document Add rules to node <TITLE>
+2023-04-30T15:15:41.141Z ml-core:rule-mapper Set to TITLE from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:15:41.141Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:15:41.141Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:15:41.141Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:15:41.142Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:15:41.142Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:15:41.142Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:15:41.142Z ml-core:ml-dom:document Add rules to node <BODY>
+2023-04-30T15:15:41.142Z ml-core:rule-mapper Set to BODY from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:15:41.142Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:15:41.142Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:15:41.142Z ml-core:ml-dom:document Add rules to node <H2>
+2023-04-30T15:15:41.142Z ml-core:rule-mapper Set to H2 from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:15:41.142Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:15:41.142Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:15:41.143Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:15:41.143Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:15:41.143Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:15:41.143Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:15:41.143Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:15:41.143Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:15:41.143Z ml-core:rule-mapper ruleTree:
+2023-04-30T15:15:41.143Z ml-core:rule-mapper:node <#document>
+2023-04-30T15:15:41.144Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:15:41.144Z ml-core:rule-mapper:node <HTML>
+2023-04-30T15:15:41.144Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:15:41.144Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:15:41.144Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:15:41.144Z ml-core:rule-mapper:node <HEAD>
+2023-04-30T15:15:41.144Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:15:41.144Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:15:41.144Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:15:41.144Z ml-core:rule-mapper:node <META>
+2023-04-30T15:15:41.145Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:15:41.145Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:15:41.145Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:15:41.145Z ml-core:rule-mapper:node <META>
+2023-04-30T15:15:41.145Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:15:41.145Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:15:41.145Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:15:41.145Z ml-core:rule-mapper:node <META>
+2023-04-30T15:15:41.145Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:15:41.145Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:15:41.145Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:15:41.145Z ml-core:rule-mapper:node <TITLE>
+2023-04-30T15:15:41.146Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:15:41.146Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:15:41.146Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:15:41.146Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:15:41.146Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:15:41.146Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:15:41.146Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:15:41.146Z ml-core:rule-mapper:node <BODY>
+2023-04-30T15:15:41.146Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:15:41.146Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:15:41.146Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:15:41.146Z ml-core:rule-mapper:node <H2>
+2023-04-30T15:15:41.147Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:15:41.147Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:15:41.147Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:15:41.147Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:15:41.147Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:15:41.147Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:15:41.147Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:15:41.147Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:15:41.147Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:15:41.147Z ml-core verify: start
+2023-04-30T15:15:41.148Z ml-core doctype Rule: verify
+2023-04-30T15:15:41.149Z ml-core doctype Rule: verify end
+2023-04-30T15:15:41.150Z ml-core:result Error: 1
+2023-04-30T15:15:41.150Z ml-core:result Warning: 0
+2023-04-30T15:15:41.150Z ml-core:result Info: 0
+2023-04-30T15:15:41.150Z ml-core verify: end
+2023-04-30T15:15:41.153Z markuplint-cli:ml-engine exec: end
+2023-04-30T15:15:41.153Z markuplint-cli Output reports
+<markup[38;5;33mlint[39m> [31merror: Require doctype (doctype) [4m/workspaces/markuplint-test/test.html:1:1[24m[39m
+  [36m1[39m: [41m[49m<html[38;5;8m•[39mlang="en">
+  [36m2[39m: 
