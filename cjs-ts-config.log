@@ -1,0 +1,1540 @@
+npx markuplint --config markuplint.config.ts --verbose test.html
+
+```markuplint.config.ts
+import type { Config } from "@markuplint/ml-config";
+
+const config: Config = {
+  rules: {
+    doctype: true,
+  },
+};
+
+module.exports = config;
+```
+
+2023-04-30T15:08:52.842Z markuplint-cli Debug enable: markuplint-cli
+2023-04-30T15:08:52.843Z ml-core Debug enable: ml-core
+2023-04-30T15:08:52.843Z ml-core Debug enable: ml-core, markuplint-cli
+2023-04-30T15:08:52.853Z markuplint-cli File list: [ '/workspaces/markuplint-test/test.html' ]
+2023-04-30T15:08:52.853Z markuplint-cli Config: /workspaces/markuplint-test/markuplint.config.ts
+2023-04-30T15:08:52.853Z markuplint-cli Fix option: false
+2023-04-30T15:08:52.854Z markuplint-cli:ml-engine exec: start
+2023-04-30T15:08:52.855Z markuplint-cli:ml-engine:config defaultConfigKey: N/A
+2023-04-30T15:08:52.866Z markuplint-cli:ml-engine:config configFilePathsFromTarget: N/A
+2023-04-30T15:08:52.867Z markuplint-cli:ml-engine:config option.config: N/A
+2023-04-30T15:08:52.867Z markuplint-cli:ml-engine:config defaultRecommended: 0
+2023-04-30T15:08:54.373Z markuplint-cli:ml-engine:file Fetched Config files: Set(9) {
+  '/workspaces/markuplint-test/markuplint.config.ts',
+  'markuplint:code-styles',
+  'markuplint:html-standard',
+  'markuplint:a11y',
+  'markuplint:performance',
+  'markuplint:security',
+  'markuplint:rdfa',
+  'markuplint:recommended',
+  '0'
+}
+2023-04-30T15:08:54.374Z markuplint-cli:ml-engine:file Resolved Config: {
+  rules: {
+    doctype: true,
+    'attr-duplication': true,
+    'character-reference': true,
+    'deprecated-attr': true,
+    'deprecated-element': true,
+    'id-duplication': true,
+    'ineffective-attr': true,
+    'no-refer-to-non-existent-id': true,
+    'permitted-contents': true,
+    'placeholder-label-option': true,
+    'require-datetime': true,
+    'required-attr': true,
+    'invalid-attr': { options: [Object] },
+    'label-has-control': true,
+    'landmark-roles': true,
+    'require-accessible-name': true,
+    'required-h1': true,
+    'use-list': true,
+    'wai-aria': true
+  },
+  nodeRules: [
+    { selector: ':where(head)', rules: [Object] },
+    { selector: 'h1, h2, h3, h4, h5, h6', rules: [Object] },
+    {
+      selector: ':where(figcaption ~ table, table:has(~ figcaption))',
+      rules: [Object]
+    },
+    { selector: ':where(html)', rules: [Object] },
+    { selector: ':where(abbr)', rules: [Object] },
+    { selector: ':where(video, audio)', rules: [Object] },
+    { selector: ':where(video[autoplay])', rules: [Object] },
+    { selector: ':where(th, td)', rules: [Object] },
+    { selector: ':where(summary)', rules: [Object] },
+    { selector: ':where(:not(dialog, dialog *))', rules: [Object] },
+    { selector: ':where(search)', rules: [Object] },
+    { selector: ':where(head)', rules: [Object] },
+    {
+      selector: ':where(script[src]:not([type=module]))',
+      rules: [Object]
+    },
+    { selector: ':where(img[src])', rules: [Object] },
+    { selector: ':where(img[src][width][height])', rules: [Object] },
+    { selector: ':where(iframe)', rules: [Object] },
+    { selector: ':where(meta[property])', rules: [Object] }
+  ]
+}
+2023-04-30T15:08:54.374Z markuplint-cli:ml-engine:file Resolved Plugins: []
+2023-04-30T15:08:54.375Z markuplint-cli:ml-engine:file Resolve Errors: []
+2023-04-30T15:08:54.376Z markuplint-cli:ml-engine:file Fetched Parser module: @markuplint/html-parser
+2023-04-30T15:08:54.377Z markuplint-cli:ml-engine:file Resolved ruleset: Ruleset {
+  rules: {
+    doctype: true,
+    'attr-duplication': true,
+    'character-reference': true,
+    'deprecated-attr': true,
+    'deprecated-element': true,
+    'id-duplication': true,
+    'ineffective-attr': true,
+    'no-refer-to-non-existent-id': true,
+    'permitted-contents': true,
+    'placeholder-label-option': true,
+    'require-datetime': true,
+    'required-attr': true,
+    'invalid-attr': { options: [Object] },
+    'label-has-control': true,
+    'landmark-roles': true,
+    'require-accessible-name': true,
+    'required-h1': true,
+    'use-list': true,
+    'wai-aria': true
+  },
+  nodeRules: [
+    { selector: ':where(head)', rules: [Object] },
+    { selector: 'h1, h2, h3, h4, h5, h6', rules: [Object] },
+    {
+      selector: ':where(figcaption ~ table, table:has(~ figcaption))',
+      rules: [Object]
+    },
+    { selector: ':where(html)', rules: [Object] },
+    { selector: ':where(abbr)', rules: [Object] },
+    { selector: ':where(video, audio)', rules: [Object] },
+    { selector: ':where(video[autoplay])', rules: [Object] },
+    { selector: ':where(th, td)', rules: [Object] },
+    { selector: ':where(summary)', rules: [Object] },
+    { selector: ':where(:not(dialog, dialog *))', rules: [Object] },
+    { selector: ':where(search)', rules: [Object] },
+    { selector: ':where(head)', rules: [Object] },
+    {
+      selector: ':where(script[src]:not([type=module]))',
+      rules: [Object]
+    },
+    { selector: ':where(img[src])', rules: [Object] },
+    { selector: ':where(img[src][width][height])', rules: [Object] },
+    { selector: ':where(iframe)', rules: [Object] },
+    { selector: ':where(meta[property])', rules: [Object] }
+  ],
+  childNodeRules: []
+}
+2023-04-30T15:08:54.378Z markuplint-cli:ml-engine:file Resolved schemas: HTML Standard
+2023-04-30T15:08:54.559Z markuplint-cli:ml-engine:file Resolved rules: [
+  MLRule {
+    name: 'attr-duplication',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'attr-value-quotes',
+    defaultSeverity: 'warning',
+    defaultValue: 'double',
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'case-sensitive-attr-name',
+    defaultSeverity: 'warning',
+    defaultValue: 'lower',
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'case-sensitive-tag-name',
+    defaultSeverity: 'warning',
+    defaultValue: 'lower',
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'character-reference',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'class-naming',
+    defaultSeverity: 'warning',
+    defaultValue: null,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'deprecated-attr',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'deprecated-element',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'disallowed-element',
+    defaultSeverity: 'error',
+    defaultValue: [],
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'doctype',
+    defaultSeverity: 'error',
+    defaultValue: 'always',
+    defaultOptions: { denyObsoleteType: true }
+  },
+  MLRule {
+    name: 'end-tag',
+    defaultSeverity: 'warning',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'id-duplication',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'ineffective-attr',
+    defaultSeverity: 'warning',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'invalid-attr',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: {}
+  },
+  MLRule {
+    name: 'label-has-control',
+    defaultSeverity: 'warning',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'landmark-roles',
+    defaultSeverity: 'warning',
+    defaultValue: true,
+    defaultOptions: { ignoreRoles: [], labelEachArea: true }
+  },
+  MLRule {
+    name: 'no-boolean-attr-value',
+    defaultSeverity: 'warning',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'no-default-value',
+    defaultSeverity: 'warning',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'no-empty-palpable-content',
+    defaultSeverity: 'warning',
+    defaultValue: true,
+    defaultOptions: { extendsExposableElements: true, ignoreIfAriaBusy: true }
+  },
+  MLRule {
+    name: 'no-hard-code-id',
+    defaultSeverity: 'warning',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'no-refer-to-non-existent-id',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: { ariaVersion: '1.2', fragmentRefersNameAttr: false }
+  },
+  MLRule {
+    name: 'no-use-event-handler-attr',
+    defaultSeverity: 'warning',
+    defaultValue: true,
+    defaultOptions: {}
+  },
+  MLRule {
+    name: 'permitted-contents',
+    defaultSeverity: 'error',
+    defaultValue: [],
+    defaultOptions: { ignoreHasMutableChildren: true }
+  },
+  MLRule {
+    name: 'placeholder-label-option',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'require-accessible-name',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: { ariaVersion: '1.2' }
+  },
+  MLRule {
+    name: 'require-datetime',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: { langs: undefined }
+  },
+  MLRule {
+    name: 'required-attr',
+    defaultSeverity: 'error',
+    defaultValue: [],
+    defaultOptions: undefined
+  },
+  MLRule {
+    name: 'required-element',
+    defaultSeverity: 'error',
+    defaultValue: [],
+    defaultOptions: { ignoreHasMutableContents: true }
+  },
+  MLRule {
+    name: 'required-h1',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: { 'expected-once': true, 'in-document-fragment': false }
+  },
+  MLRule {
+    name: 'use-list',
+    defaultSeverity: 'warning',
+    defaultValue: [
+      '•', '‣', '⁃',  '⁌', '⁍', '∙',
+      '○', '●', '◘',  '◦', '☙', '❥',
+      '❧', '⦾', '⦿',  '·', '·', '•',
+      '∙', '⋅', '・', '･', '-', '*',
+      '+'
+    ],
+    defaultOptions: { spaceNeededBullets: [Array] }
+  },
+  MLRule {
+    name: 'wai-aria',
+    defaultSeverity: 'error',
+    defaultValue: true,
+    defaultOptions: {
+      checkingValue: true,
+      checkingDeprecatedProps: true,
+      permittedAriaRoles: true,
+      checkingRequiredOwnedElements: true,
+      checkingPresentationalChildren: false,
+      checkingInteractionInHidden: false,
+      disallowSetImplicitRole: true,
+      disallowSetImplicitProps: true,
+      disallowDefaultValue: false,
+      version: '1.2'
+    }
+  }
+]
+2023-04-30T15:08:54.561Z markuplint-cli:ml-engine:file Loaded 31 rules: [
+  'attr-duplication',
+  'attr-value-quotes',
+  'case-sensitive-attr-name',
+  'case-sensitive-tag-name',
+  'character-reference',
+  'class-naming',
+  'deprecated-attr',
+  'deprecated-element',
+  'disallowed-element',
+  'doctype',
+  'end-tag',
+  'id-duplication',
+  'ineffective-attr',
+  'invalid-attr',
+  'label-has-control',
+  'landmark-roles',
+  'no-boolean-attr-value',
+  'no-default-value',
+  'no-empty-palpable-content',
+  'no-hard-code-id',
+  'no-refer-to-non-existent-id',
+  'no-use-event-handler-attr',
+  'permitted-contents',
+  'placeholder-label-option',
+  'require-accessible-name',
+  'require-datetime',
+  'required-attr',
+  'required-element',
+  'required-h1',
+  'use-list',
+  'wai-aria'
+]
+2023-04-30T15:08:54.561Z markuplint-cli:ml-engine:file Get source code
+2023-04-30T15:08:54.563Z markuplint-cli:ml-engine:file Source code path: /workspaces/markuplint-test/test.html
+2023-04-30T15:08:54.563Z markuplint-cli:ml-engine:file Source code size: 265byte
+2023-04-30T15:08:54.573Z ml-core:node-store Mapped: 39db6316-b0b7-4f8f-9b47-0839105057bc (html: "<html lang="en">")
+2023-04-30T15:08:54.574Z ml-core:node-store Mapped: 4fa21f8b-d54d-4b6c-80f9-74ca9860c4b6 (lang: "lang="en"")
+2023-04-30T15:08:54.574Z ml-core:node-store Mapped: bd1ce9fa-b3d6-43de-95c9-adf0433617b9 (#text: "⏎⏎")
+2023-04-30T15:08:54.574Z ml-core:node-store Mapped: fac02310-ce57-44ac-a128-9410435b35af (head: "<head>")
+2023-04-30T15:08:54.574Z ml-core:node-store Mapped: 68cef832-864c-4af0-a9d5-76fc51879349 (#text: "⏎    ")
+2023-04-30T15:08:54.575Z ml-core:node-store Mapped: cacbbe28-57d7-4439-aedf-76839832a722 (meta: "<meta charset="UTF-8">")
+2023-04-30T15:08:54.575Z ml-core:node-store Mapped: 5564cee1-b67f-4415-8355-7f12dc12f6d0 (charset: "charset="UTF-8"")
+2023-04-30T15:08:54.575Z ml-core:node-store Mapped: 27f07f90-589b-42bf-8882-97e3756eeed8 (#text: "⏎    ")
+2023-04-30T15:08:54.575Z ml-core:node-store Mapped: 1865729c-360a-4715-9f7e-763450cdddcc (meta: "<meta name="viewport" content="width=device-width, initial-scale=1.0">")
+2023-04-30T15:08:54.575Z ml-core:node-store Mapped: 777cd0e7-d3af-499a-a861-2da302ebdab7 (name: "name="viewport"")
+2023-04-30T15:08:54.575Z ml-core:node-store Mapped: df9293b4-5309-43a3-83b1-568b96ba5045 (content: "content="width=device-width, initial-scale=1.0"")
+2023-04-30T15:08:54.575Z ml-core:node-store Mapped: 5b59da80-47da-49d1-a04d-74ddd092d994 (#text: "⏎    ")
+2023-04-30T15:08:54.576Z ml-core:node-store Mapped: 8b841195-393c-44d3-adc9-7a7c0a0383e2 (meta: "<meta http-equiv="X-UA-Compatible" content="ie=edge">")
+2023-04-30T15:08:54.576Z ml-core:node-store Mapped: f212a299-a689-48f2-91c7-6d3fc25c6017 (http-equiv: "http-equiv="X-UA-Compatible"")
+2023-04-30T15:08:54.576Z ml-core:node-store Mapped: bc0a5025-8c0a-42d5-be5d-3b8ff3b70a4b (content: "content="ie=edge"")
+2023-04-30T15:08:54.576Z ml-core:node-store Mapped: b21f14cb-2cb8-4fe5-bb91-a9f2ed0b18a8 (#text: "⏎    ")
+2023-04-30T15:08:54.576Z ml-core:node-store Mapped: ff6cd073-99e4-4d4f-b82c-2acee706268d (title: "<title>")
+2023-04-30T15:08:54.576Z ml-core:node-store Mapped: d939a1f1-8ca6-4a99-b54d-4dac9fa6dde2 (#text: "Document")
+2023-04-30T15:08:54.576Z ml-core:node-store Mapped: 9120d82e-6d8e-4d35-b43e-5078e36da3a7 (#text: "⏎")
+2023-04-30T15:08:54.576Z ml-core:node-store Mapped: 3c2811e6-ed2e-4159-9658-512f4e98b456 (#text: "⏎⏎")
+2023-04-30T15:08:54.577Z ml-core:node-store Mapped: 4aca360f-4638-421b-b66d-c70e284bacd9 (body: "<body>")
+2023-04-30T15:08:54.577Z ml-core:node-store Mapped: 9cd32f74-f764-468d-8aca-9ecbbf3451c4 (#text: "⏎    ")
+2023-04-30T15:08:54.577Z ml-core:node-store Mapped: 265b9f27-82be-4bed-9c75-dbad9d0db150 (h2: "<h2>")
+2023-04-30T15:08:54.577Z ml-core:node-store Mapped: e87d715b-b875-4bf9-8887-9dcfc21b01a5 (#text: "Title")
+2023-04-30T15:08:54.577Z ml-core:node-store Mapped: 21feb178-df03-4679-890e-b38d94e75e13 (#text: "⏎")
+2023-04-30T15:08:54.577Z ml-core:node-store Mapped: c7d1064f-4454-487d-b2c4-989d303eaa41 (#text: "⏎⏎")
+2023-04-30T15:08:54.577Z ml-core:node-store Mapped: 451266f2-e8e0-4795-9892-29fc6cb4e865 (#text: "⏎")
+2023-04-30T15:08:54.577Z ml-core:ml-dom:document Pretending: []
+2023-04-30T15:08:54.578Z ml-core:ml-dom:document Rule Mapping: [
+  'doctype',
+  'attr-duplication',
+  'character-reference',
+  'deprecated-attr',
+  'deprecated-element',
+  'id-duplication',
+  'ineffective-attr',
+  'no-refer-to-non-existent-id',
+  'permitted-contents',
+  'placeholder-label-option',
+  'require-datetime',
+  'required-attr',
+  'invalid-attr',
+  'label-has-control',
+  'landmark-roles',
+  'require-accessible-name',
+  'required-h1',
+  'use-list',
+  'wai-aria'
+]
+2023-04-30T15:08:54.578Z ml-core:rule-mapper Set to #document from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.578Z ml-core:rule-mapper Set to #document from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.579Z ml-core:rule-mapper Set to #document from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.579Z ml-core:rule-mapper Set to #document from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.579Z ml-core:rule-mapper Set to #document from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.579Z ml-core:rule-mapper Set to #document from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.579Z ml-core:rule-mapper Set to #document from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.579Z ml-core:rule-mapper Set to #document from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.579Z ml-core:rule-mapper Set to #document from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.579Z ml-core:rule-mapper Set to #document from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.579Z ml-core:rule-mapper Set to #document from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.580Z ml-core:rule-mapper Set to #document from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.580Z ml-core:rule-mapper Set to #document from rules ([ 0, 0, 0 ]): {
+  options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] }
+}
+2023-04-30T15:08:54.580Z ml-core:rule-mapper Set to #document from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.580Z ml-core:rule-mapper Set to #document from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.580Z ml-core:rule-mapper Set to #document from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.580Z ml-core:rule-mapper Set to #document from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.580Z ml-core:rule-mapper Set to #document from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.580Z ml-core:rule-mapper Set to #document from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.581Z ml-core:ml-dom:document Add rules to node <HTML>
+2023-04-30T15:08:54.581Z ml-core:rule-mapper Set to HTML from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.581Z ml-core:rule-mapper Set to HTML from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.581Z ml-core:rule-mapper Set to HTML from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.581Z ml-core:rule-mapper Set to HTML from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.581Z ml-core:rule-mapper Set to HTML from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.581Z ml-core:rule-mapper Set to HTML from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.581Z ml-core:rule-mapper Set to HTML from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.582Z ml-core:rule-mapper Set to HTML from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.582Z ml-core:rule-mapper Set to HTML from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.582Z ml-core:rule-mapper Set to HTML from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.582Z ml-core:rule-mapper Set to HTML from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.582Z ml-core:rule-mapper Set to HTML from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.582Z ml-core:rule-mapper Set to HTML from rules ([ 0, 0, 0 ]): {
+  options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] }
+}
+2023-04-30T15:08:54.582Z ml-core:rule-mapper Set to HTML from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.582Z ml-core:rule-mapper Set to HTML from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.582Z ml-core:rule-mapper Set to HTML from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.583Z ml-core:rule-mapper Set to HTML from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.583Z ml-core:rule-mapper Set to HTML from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.583Z ml-core:rule-mapper Set to HTML from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.588Z ml-core:ml-dom:document Matched nodeRule: <HTML>(:where(html))
+2023-04-30T15:08:54.589Z ml-core:ml-dom:document:rule ↑ nodeRule (required-attr): [ 'lang' ]
+2023-04-30T15:08:54.589Z ml-core:rule-mapper Unset { from: 'rules', specificity: [ 0, 0, 0 ], rule: true } from <html lang="en">
+2023-04-30T15:08:54.589Z ml-core:rule-mapper Set to HTML from nodeRules ([ 0, 0, 0 ]): [ 'lang' ]
+2023-04-30T15:08:54.592Z ml-core:ml-dom:document Matched nodeRule: <HTML>(:where(:not(dialog, dialog *)))
+2023-04-30T15:08:54.593Z ml-core:ml-dom:document:rule ↑ nodeRule (invalid-attr): {
+  options: {
+    disallowAttrs: [ 'disallowed', 'autofocus' ],
+    allowAttrs: [ [Object] ]
+  }
+}
+2023-04-30T15:08:54.593Z ml-core:rule-mapper Unset { from: 'rules', specificity: [ 0, 0, 0 ], rule: { options: { disallowAttrs: [Array], allowAttrs: [Array] } } } from <html lang="en">
+2023-04-30T15:08:54.593Z ml-core:rule-mapper Set to HTML from nodeRules ([ 0, 0, 0 ]): {
+  options: {
+    disallowAttrs: [ 'disallowed', 'autofocus' ],
+    allowAttrs: [ [Object] ]
+  }
+}
+2023-04-30T15:08:54.594Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:08:54.595Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.595Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.595Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.595Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.595Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.595Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.595Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.595Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.595Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.596Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.596Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.596Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.596Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): {
+  options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] }
+}
+2023-04-30T15:08:54.596Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.596Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.596Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.596Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.596Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.597Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.597Z ml-core:ml-dom:document Add rules to node <HEAD>
+2023-04-30T15:08:54.597Z ml-core:rule-mapper Set to HEAD from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.597Z ml-core:rule-mapper Set to HEAD from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.597Z ml-core:rule-mapper Set to HEAD from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.597Z ml-core:rule-mapper Set to HEAD from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.597Z ml-core:rule-mapper Set to HEAD from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.597Z ml-core:rule-mapper Set to HEAD from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.597Z ml-core:rule-mapper Set to HEAD from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.597Z ml-core:rule-mapper Set to HEAD from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.597Z ml-core:rule-mapper Set to HEAD from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.598Z ml-core:rule-mapper Set to HEAD from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.598Z ml-core:rule-mapper Set to HEAD from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.598Z ml-core:rule-mapper Set to HEAD from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.598Z ml-core:rule-mapper Set to HEAD from rules ([ 0, 0, 0 ]): {
+  options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] }
+}
+2023-04-30T15:08:54.598Z ml-core:rule-mapper Set to HEAD from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.598Z ml-core:rule-mapper Set to HEAD from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.598Z ml-core:rule-mapper Set to HEAD from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.598Z ml-core:rule-mapper Set to HEAD from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.598Z ml-core:rule-mapper Set to HEAD from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.598Z ml-core:rule-mapper Set to HEAD from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.599Z ml-core:ml-dom:document Matched nodeRule: <HEAD>(:where(head))
+2023-04-30T15:08:54.599Z ml-core:ml-dom:document:rule ↑ nodeRule (required-element): [ 'meta[charset="UTF-8" i]' ]
+2023-04-30T15:08:54.599Z ml-core:rule-mapper Set to HEAD from nodeRules ([ 0, 0, 0 ]): [ 'meta[charset="UTF-8" i]' ]
+2023-04-30T15:08:54.601Z ml-core:ml-dom:document Matched nodeRule: <HEAD>(:where(:not(dialog, dialog *)))
+2023-04-30T15:08:54.601Z ml-core:ml-dom:document:rule ↑ nodeRule (invalid-attr): {
+  options: {
+    disallowAttrs: [ 'disallowed', 'autofocus' ],
+    allowAttrs: [ [Object] ]
+  }
+}
+2023-04-30T15:08:54.601Z ml-core:rule-mapper Unset { from: 'rules', specificity: [ 0, 0, 0 ], rule: { options: { disallowAttrs: [Array], allowAttrs: [Array] } } } from <head>
+2023-04-30T15:08:54.602Z ml-core:rule-mapper Set to HEAD from nodeRules ([ 0, 0, 0 ]): {
+  options: {
+    disallowAttrs: [ 'disallowed', 'autofocus' ],
+    allowAttrs: [ [Object] ]
+  }
+}
+2023-04-30T15:08:54.602Z ml-core:ml-dom:document Matched nodeRule: <HEAD>(:where(head))
+2023-04-30T15:08:54.602Z ml-core:ml-dom:document:rule ↑ nodeRule (required-element): [ 'meta[charset="UTF-8" i]' ]
+2023-04-30T15:08:54.602Z ml-core:rule-mapper Unset { from: 'nodeRules', specificity: [ 0, 0, 0 ], rule: [ 'meta[charset="UTF-8" i]' ] } from <head>
+2023-04-30T15:08:54.602Z ml-core:rule-mapper Set to HEAD from nodeRules ([ 0, 0, 0 ]): [ 'meta[charset="UTF-8" i]' ]
+2023-04-30T15:08:54.603Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:08:54.603Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.603Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.603Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.604Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.604Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.604Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.604Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.604Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.604Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.604Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.604Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.604Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.605Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): {
+  options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] }
+}
+2023-04-30T15:08:54.605Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.605Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.605Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.605Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.605Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.605Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.605Z ml-core:ml-dom:document Add rules to node <META>
+2023-04-30T15:08:54.605Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.605Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.605Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.606Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.606Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.606Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.606Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.606Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.606Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.606Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.606Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.606Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.606Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): {
+  options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] }
+}
+2023-04-30T15:08:54.607Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.607Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.607Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.607Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.607Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.607Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.608Z ml-core:ml-dom:document Matched nodeRule: <META>(:where(:not(dialog, dialog *)))
+2023-04-30T15:08:54.608Z ml-core:ml-dom:document:rule ↑ nodeRule (invalid-attr): {
+  options: {
+    disallowAttrs: [ 'disallowed', 'autofocus' ],
+    allowAttrs: [ [Object] ]
+  }
+}
+2023-04-30T15:08:54.609Z ml-core:rule-mapper Unset { from: 'rules', specificity: [ 0, 0, 0 ], rule: { options: { disallowAttrs: [Array], allowAttrs: [Array] } } } from <meta charset="UTF-8">
+2023-04-30T15:08:54.609Z ml-core:rule-mapper Set to META from nodeRules ([ 0, 0, 0 ]): {
+  options: {
+    disallowAttrs: [ 'disallowed', 'autofocus' ],
+    allowAttrs: [ [Object] ]
+  }
+}
+2023-04-30T15:08:54.610Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:08:54.610Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.610Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.610Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.610Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.610Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.610Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.610Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.610Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.611Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.611Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.611Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.611Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.611Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): {
+  options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] }
+}
+2023-04-30T15:08:54.611Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.611Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.611Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.611Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.612Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.612Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.612Z ml-core:ml-dom:document Add rules to node <META>
+2023-04-30T15:08:54.612Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.612Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.612Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.612Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.612Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.612Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.612Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.613Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.613Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.613Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.613Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.613Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.613Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): {
+  options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] }
+}
+2023-04-30T15:08:54.613Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.613Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.613Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.614Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.614Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.614Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.616Z ml-core:ml-dom:document Matched nodeRule: <META>(:where(:not(dialog, dialog *)))
+2023-04-30T15:08:54.616Z ml-core:ml-dom:document:rule ↑ nodeRule (invalid-attr): {
+  options: {
+    disallowAttrs: [ 'disallowed', 'autofocus' ],
+    allowAttrs: [ [Object] ]
+  }
+}
+2023-04-30T15:08:54.616Z ml-core:rule-mapper Unset { from: 'rules', specificity: [ 0, 0, 0 ], rule: { options: { disallowAttrs: [Array], allowAttrs: [Array] } } } from <meta name="viewport" content="width=device-width, initial-scale=1.0">
+2023-04-30T15:08:54.616Z ml-core:rule-mapper Set to META from nodeRules ([ 0, 0, 0 ]): {
+  options: {
+    disallowAttrs: [ 'disallowed', 'autofocus' ],
+    allowAttrs: [ [Object] ]
+  }
+}
+2023-04-30T15:08:54.618Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:08:54.619Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.619Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.619Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.619Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.619Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.619Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.619Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.619Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.619Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.619Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.620Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.620Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.620Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): {
+  options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] }
+}
+2023-04-30T15:08:54.620Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.620Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.620Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.620Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.620Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.620Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.620Z ml-core:ml-dom:document Add rules to node <META>
+2023-04-30T15:08:54.621Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.621Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.621Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.621Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.621Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.621Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.621Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.621Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.621Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.621Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.621Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.622Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.622Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): {
+  options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] }
+}
+2023-04-30T15:08:54.622Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.622Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.622Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.622Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.622Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.622Z ml-core:rule-mapper Set to META from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.624Z ml-core:ml-dom:document Matched nodeRule: <META>(:where(:not(dialog, dialog *)))
+2023-04-30T15:08:54.624Z ml-core:ml-dom:document:rule ↑ nodeRule (invalid-attr): {
+  options: {
+    disallowAttrs: [ 'disallowed', 'autofocus' ],
+    allowAttrs: [ [Object] ]
+  }
+}
+2023-04-30T15:08:54.624Z ml-core:rule-mapper Unset { from: 'rules', specificity: [ 0, 0, 0 ], rule: { options: { disallowAttrs: [Array], allowAttrs: [Array] } } } from <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2023-04-30T15:08:54.625Z ml-core:rule-mapper Set to META from nodeRules ([ 0, 0, 0 ]): {
+  options: {
+    disallowAttrs: [ 'disallowed', 'autofocus' ],
+    allowAttrs: [ [Object] ]
+  }
+}
+2023-04-30T15:08:54.626Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:08:54.626Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.626Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.626Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.626Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.626Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.627Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.627Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.627Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.627Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.627Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.627Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.627Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.627Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): {
+  options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] }
+}
+2023-04-30T15:08:54.627Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.627Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.627Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.628Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.628Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.628Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.628Z ml-core:ml-dom:document Add rules to node <TITLE>
+2023-04-30T15:08:54.628Z ml-core:rule-mapper Set to TITLE from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.628Z ml-core:rule-mapper Set to TITLE from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.628Z ml-core:rule-mapper Set to TITLE from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.628Z ml-core:rule-mapper Set to TITLE from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.628Z ml-core:rule-mapper Set to TITLE from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.628Z ml-core:rule-mapper Set to TITLE from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.628Z ml-core:rule-mapper Set to TITLE from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.629Z ml-core:rule-mapper Set to TITLE from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.629Z ml-core:rule-mapper Set to TITLE from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.629Z ml-core:rule-mapper Set to TITLE from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.629Z ml-core:rule-mapper Set to TITLE from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.629Z ml-core:rule-mapper Set to TITLE from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.629Z ml-core:rule-mapper Set to TITLE from rules ([ 0, 0, 0 ]): {
+  options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] }
+}
+2023-04-30T15:08:54.629Z ml-core:rule-mapper Set to TITLE from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.629Z ml-core:rule-mapper Set to TITLE from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.629Z ml-core:rule-mapper Set to TITLE from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.629Z ml-core:rule-mapper Set to TITLE from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.630Z ml-core:rule-mapper Set to TITLE from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.630Z ml-core:rule-mapper Set to TITLE from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.631Z ml-core:ml-dom:document Matched nodeRule: <TITLE>(:where(:not(dialog, dialog *)))
+2023-04-30T15:08:54.631Z ml-core:ml-dom:document:rule ↑ nodeRule (invalid-attr): {
+  options: {
+    disallowAttrs: [ 'disallowed', 'autofocus' ],
+    allowAttrs: [ [Object] ]
+  }
+}
+2023-04-30T15:08:54.631Z ml-core:rule-mapper Unset { from: 'rules', specificity: [ 0, 0, 0 ], rule: { options: { disallowAttrs: [Array], allowAttrs: [Array] } } } from <title>
+2023-04-30T15:08:54.631Z ml-core:rule-mapper Set to TITLE from nodeRules ([ 0, 0, 0 ]): {
+  options: {
+    disallowAttrs: [ 'disallowed', 'autofocus' ],
+    allowAttrs: [ [Object] ]
+  }
+}
+2023-04-30T15:08:54.632Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:08:54.633Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.633Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.633Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.633Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.633Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.633Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.633Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.633Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.633Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.634Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.634Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.634Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.634Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): {
+  options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] }
+}
+2023-04-30T15:08:54.634Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.634Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.634Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.634Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.634Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.634Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.635Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:08:54.635Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.635Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.635Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.635Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.635Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.635Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.635Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.635Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.635Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.635Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.636Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.636Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.636Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): {
+  options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] }
+}
+2023-04-30T15:08:54.636Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.636Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.636Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.636Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.636Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.636Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.636Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:08:54.637Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.637Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.637Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.637Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.637Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.637Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.637Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.637Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.637Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.637Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.638Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.638Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.638Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): {
+  options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] }
+}
+2023-04-30T15:08:54.638Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.638Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.638Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.638Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.638Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.638Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.638Z ml-core:ml-dom:document Add rules to node <BODY>
+2023-04-30T15:08:54.638Z ml-core:rule-mapper Set to BODY from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.638Z ml-core:rule-mapper Set to BODY from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.638Z ml-core:rule-mapper Set to BODY from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.639Z ml-core:rule-mapper Set to BODY from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.639Z ml-core:rule-mapper Set to BODY from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.639Z ml-core:rule-mapper Set to BODY from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.639Z ml-core:rule-mapper Set to BODY from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.639Z ml-core:rule-mapper Set to BODY from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.639Z ml-core:rule-mapper Set to BODY from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.639Z ml-core:rule-mapper Set to BODY from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.639Z ml-core:rule-mapper Set to BODY from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.639Z ml-core:rule-mapper Set to BODY from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.639Z ml-core:rule-mapper Set to BODY from rules ([ 0, 0, 0 ]): {
+  options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] }
+}
+2023-04-30T15:08:54.639Z ml-core:rule-mapper Set to BODY from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.639Z ml-core:rule-mapper Set to BODY from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.639Z ml-core:rule-mapper Set to BODY from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.639Z ml-core:rule-mapper Set to BODY from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.639Z ml-core:rule-mapper Set to BODY from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.640Z ml-core:rule-mapper Set to BODY from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.641Z ml-core:ml-dom:document Matched nodeRule: <BODY>(:where(:not(dialog, dialog *)))
+2023-04-30T15:08:54.641Z ml-core:ml-dom:document:rule ↑ nodeRule (invalid-attr): {
+  options: {
+    disallowAttrs: [ 'disallowed', 'autofocus' ],
+    allowAttrs: [ [Object] ]
+  }
+}
+2023-04-30T15:08:54.641Z ml-core:rule-mapper Unset { from: 'rules', specificity: [ 0, 0, 0 ], rule: { options: { disallowAttrs: [Array], allowAttrs: [Array] } } } from <body>
+2023-04-30T15:08:54.641Z ml-core:rule-mapper Set to BODY from nodeRules ([ 0, 0, 0 ]): {
+  options: {
+    disallowAttrs: [ 'disallowed', 'autofocus' ],
+    allowAttrs: [ [Object] ]
+  }
+}
+2023-04-30T15:08:54.642Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:08:54.642Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.642Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.642Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.642Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.642Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.642Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.642Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.642Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.643Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.643Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.643Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.643Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.643Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): {
+  options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] }
+}
+2023-04-30T15:08:54.643Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.643Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.643Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.643Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.643Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.643Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.643Z ml-core:ml-dom:document Add rules to node <H2>
+2023-04-30T15:08:54.643Z ml-core:rule-mapper Set to H2 from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.644Z ml-core:rule-mapper Set to H2 from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.644Z ml-core:rule-mapper Set to H2 from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.644Z ml-core:rule-mapper Set to H2 from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.644Z ml-core:rule-mapper Set to H2 from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.644Z ml-core:rule-mapper Set to H2 from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.644Z ml-core:rule-mapper Set to H2 from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.644Z ml-core:rule-mapper Set to H2 from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.644Z ml-core:rule-mapper Set to H2 from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.644Z ml-core:rule-mapper Set to H2 from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.644Z ml-core:rule-mapper Set to H2 from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.644Z ml-core:rule-mapper Set to H2 from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.644Z ml-core:rule-mapper Set to H2 from rules ([ 0, 0, 0 ]): {
+  options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] }
+}
+2023-04-30T15:08:54.644Z ml-core:rule-mapper Set to H2 from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.644Z ml-core:rule-mapper Set to H2 from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.644Z ml-core:rule-mapper Set to H2 from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.645Z ml-core:rule-mapper Set to H2 from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.645Z ml-core:rule-mapper Set to H2 from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.645Z ml-core:rule-mapper Set to H2 from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.645Z ml-core:ml-dom:document Matched nodeRule: <H2>(h1, h2, h3, h4, h5, h6)
+2023-04-30T15:08:54.646Z ml-core:ml-dom:document:rule ↑ nodeRule (disallowed-element): {
+  value: [ 'small' ],
+  reason: 'The small element must not be used for subheadings. https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-small-element'
+}
+2023-04-30T15:08:54.646Z ml-core:rule-mapper Set to H2 from nodeRules ([ 0, 0, 1 ]): {
+  value: [ 'small' ],
+  reason: 'The small element must not be used for subheadings. https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-small-element'
+}
+2023-04-30T15:08:54.647Z ml-core:ml-dom:document Matched nodeRule: <H2>(:where(:not(dialog, dialog *)))
+2023-04-30T15:08:54.648Z ml-core:ml-dom:document:rule ↑ nodeRule (invalid-attr): {
+  options: {
+    disallowAttrs: [ 'disallowed', 'autofocus' ],
+    allowAttrs: [ [Object] ]
+  }
+}
+2023-04-30T15:08:54.648Z ml-core:rule-mapper Unset { from: 'rules', specificity: [ 0, 0, 0 ], rule: { options: { disallowAttrs: [Array], allowAttrs: [Array] } } } from <h2>
+2023-04-30T15:08:54.648Z ml-core:rule-mapper Set to H2 from nodeRules ([ 0, 0, 0 ]): {
+  options: {
+    disallowAttrs: [ 'disallowed', 'autofocus' ],
+    allowAttrs: [ [Object] ]
+  }
+}
+2023-04-30T15:08:54.648Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:08:54.649Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.649Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.649Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.649Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.649Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.649Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.649Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.649Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.649Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.649Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.649Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.649Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.649Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): {
+  options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] }
+}
+2023-04-30T15:08:54.649Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.650Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.650Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.650Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.650Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.650Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.650Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:08:54.650Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.650Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.650Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.650Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.650Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.650Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.650Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.650Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.650Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.650Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.651Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.651Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.651Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): {
+  options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] }
+}
+2023-04-30T15:08:54.651Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.651Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.651Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.651Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.651Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.651Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.651Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:08:54.651Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.651Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.651Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.651Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.651Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.651Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.651Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.652Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.652Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.652Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.652Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.652Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.652Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): {
+  options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] }
+}
+2023-04-30T15:08:54.652Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.652Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.652Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.652Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.652Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.652Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.653Z ml-core:ml-dom:document Add rules to node <#text>
+2023-04-30T15:08:54.653Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.653Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.653Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.653Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.653Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.653Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.653Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.653Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.653Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.653Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.653Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.653Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.653Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): {
+  options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] }
+}
+2023-04-30T15:08:54.654Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.654Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.654Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.654Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.654Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.654Z ml-core:rule-mapper Set to #text from rules ([ 0, 0, 0 ]): true
+2023-04-30T15:08:54.654Z ml-core:rule-mapper ruleTree:
+2023-04-30T15:08:54.654Z ml-core:rule-mapper:node <#document>
+2023-04-30T15:08:54.654Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:08:54.654Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] attr-duplication: true
+2023-04-30T15:08:54.655Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] character-reference: true
+2023-04-30T15:08:54.655Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-attr: true
+2023-04-30T15:08:54.655Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-element: true
+2023-04-30T15:08:54.655Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] id-duplication: true
+2023-04-30T15:08:54.655Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] ineffective-attr: true
+2023-04-30T15:08:54.655Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] no-refer-to-non-existent-id: true
+2023-04-30T15:08:54.655Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] permitted-contents: true
+2023-04-30T15:08:54.655Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] placeholder-label-option: true
+2023-04-30T15:08:54.655Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-datetime: true
+2023-04-30T15:08:54.655Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-attr: true
+2023-04-30T15:08:54.655Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] invalid-attr: { options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] } }
+2023-04-30T15:08:54.655Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] label-has-control: true
+2023-04-30T15:08:54.655Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] landmark-roles: true
+2023-04-30T15:08:54.656Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-accessible-name: true
+2023-04-30T15:08:54.656Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-h1: true
+2023-04-30T15:08:54.656Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] use-list: true
+2023-04-30T15:08:54.656Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] wai-aria: true
+2023-04-30T15:08:54.656Z ml-core:rule-mapper:node <HTML>
+2023-04-30T15:08:54.656Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:08:54.656Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] attr-duplication: true
+2023-04-30T15:08:54.656Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] character-reference: true
+2023-04-30T15:08:54.656Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-attr: true
+2023-04-30T15:08:54.656Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-element: true
+2023-04-30T15:08:54.656Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] id-duplication: true
+2023-04-30T15:08:54.656Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] ineffective-attr: true
+2023-04-30T15:08:54.656Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] no-refer-to-non-existent-id: true
+2023-04-30T15:08:54.656Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] permitted-contents: true
+2023-04-30T15:08:54.657Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] placeholder-label-option: true
+2023-04-30T15:08:54.657Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-datetime: true
+2023-04-30T15:08:54.657Z ml-core:rule-mapper:node:rule [from: nodeRules([ 0, 0, 0 ])] required-attr: [ 'lang' ]
+2023-04-30T15:08:54.657Z ml-core:rule-mapper:node:rule [from: nodeRules([ 0, 0, 0 ])] invalid-attr: { options: { disallowAttrs: [ 'disallowed', 'autofocus' ], allowAttrs: [ [Object] ] } }
+2023-04-30T15:08:54.657Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] label-has-control: true
+2023-04-30T15:08:54.657Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] landmark-roles: true
+2023-04-30T15:08:54.657Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-accessible-name: true
+2023-04-30T15:08:54.657Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-h1: true
+2023-04-30T15:08:54.657Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] use-list: true
+2023-04-30T15:08:54.657Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] wai-aria: true
+2023-04-30T15:08:54.657Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:08:54.657Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:08:54.657Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] attr-duplication: true
+2023-04-30T15:08:54.658Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] character-reference: true
+2023-04-30T15:08:54.658Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-attr: true
+2023-04-30T15:08:54.658Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-element: true
+2023-04-30T15:08:54.658Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] id-duplication: true
+2023-04-30T15:08:54.658Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] ineffective-attr: true
+2023-04-30T15:08:54.658Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] no-refer-to-non-existent-id: true
+2023-04-30T15:08:54.658Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] permitted-contents: true
+2023-04-30T15:08:54.658Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] placeholder-label-option: true
+2023-04-30T15:08:54.658Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-datetime: true
+2023-04-30T15:08:54.658Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-attr: true
+2023-04-30T15:08:54.658Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] invalid-attr: { options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] } }
+2023-04-30T15:08:54.658Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] label-has-control: true
+2023-04-30T15:08:54.658Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] landmark-roles: true
+2023-04-30T15:08:54.659Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-accessible-name: true
+2023-04-30T15:08:54.659Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-h1: true
+2023-04-30T15:08:54.659Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] use-list: true
+2023-04-30T15:08:54.659Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] wai-aria: true
+2023-04-30T15:08:54.659Z ml-core:rule-mapper:node <HEAD>
+2023-04-30T15:08:54.659Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:08:54.659Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] attr-duplication: true
+2023-04-30T15:08:54.659Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] character-reference: true
+2023-04-30T15:08:54.659Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-attr: true
+2023-04-30T15:08:54.659Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-element: true
+2023-04-30T15:08:54.659Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] id-duplication: true
+2023-04-30T15:08:54.659Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] ineffective-attr: true
+2023-04-30T15:08:54.659Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] no-refer-to-non-existent-id: true
+2023-04-30T15:08:54.659Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] permitted-contents: true
+2023-04-30T15:08:54.659Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] placeholder-label-option: true
+2023-04-30T15:08:54.659Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-datetime: true
+2023-04-30T15:08:54.660Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-attr: true
+2023-04-30T15:08:54.660Z ml-core:rule-mapper:node:rule [from: nodeRules([ 0, 0, 0 ])] invalid-attr: { options: { disallowAttrs: [ 'disallowed', 'autofocus' ], allowAttrs: [ [Object] ] } }
+2023-04-30T15:08:54.660Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] label-has-control: true
+2023-04-30T15:08:54.660Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] landmark-roles: true
+2023-04-30T15:08:54.660Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-accessible-name: true
+2023-04-30T15:08:54.660Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-h1: true
+2023-04-30T15:08:54.660Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] use-list: true
+2023-04-30T15:08:54.660Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] wai-aria: true
+2023-04-30T15:08:54.660Z ml-core:rule-mapper:node:rule [from: nodeRules([ 0, 0, 0 ])] required-element: [ 'meta[charset="UTF-8" i]' ]
+2023-04-30T15:08:54.660Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:08:54.660Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:08:54.660Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] attr-duplication: true
+2023-04-30T15:08:54.660Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] character-reference: true
+2023-04-30T15:08:54.661Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-attr: true
+2023-04-30T15:08:54.661Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-element: true
+2023-04-30T15:08:54.661Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] id-duplication: true
+2023-04-30T15:08:54.661Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] ineffective-attr: true
+2023-04-30T15:08:54.661Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] no-refer-to-non-existent-id: true
+2023-04-30T15:08:54.661Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] permitted-contents: true
+2023-04-30T15:08:54.661Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] placeholder-label-option: true
+2023-04-30T15:08:54.661Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-datetime: true
+2023-04-30T15:08:54.661Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-attr: true
+2023-04-30T15:08:54.661Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] invalid-attr: { options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] } }
+2023-04-30T15:08:54.661Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] label-has-control: true
+2023-04-30T15:08:54.661Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] landmark-roles: true
+2023-04-30T15:08:54.661Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-accessible-name: true
+2023-04-30T15:08:54.661Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-h1: true
+2023-04-30T15:08:54.661Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] use-list: true
+2023-04-30T15:08:54.662Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] wai-aria: true
+2023-04-30T15:08:54.662Z ml-core:rule-mapper:node <META>
+2023-04-30T15:08:54.662Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:08:54.662Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] attr-duplication: true
+2023-04-30T15:08:54.662Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] character-reference: true
+2023-04-30T15:08:54.662Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-attr: true
+2023-04-30T15:08:54.662Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-element: true
+2023-04-30T15:08:54.662Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] id-duplication: true
+2023-04-30T15:08:54.662Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] ineffective-attr: true
+2023-04-30T15:08:54.662Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] no-refer-to-non-existent-id: true
+2023-04-30T15:08:54.662Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] permitted-contents: true
+2023-04-30T15:08:54.662Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] placeholder-label-option: true
+2023-04-30T15:08:54.662Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-datetime: true
+2023-04-30T15:08:54.663Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-attr: true
+2023-04-30T15:08:54.663Z ml-core:rule-mapper:node:rule [from: nodeRules([ 0, 0, 0 ])] invalid-attr: { options: { disallowAttrs: [ 'disallowed', 'autofocus' ], allowAttrs: [ [Object] ] } }
+2023-04-30T15:08:54.663Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] label-has-control: true
+2023-04-30T15:08:54.663Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] landmark-roles: true
+2023-04-30T15:08:54.663Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-accessible-name: true
+2023-04-30T15:08:54.663Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-h1: true
+2023-04-30T15:08:54.663Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] use-list: true
+2023-04-30T15:08:54.663Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] wai-aria: true
+2023-04-30T15:08:54.663Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:08:54.663Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:08:54.663Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] attr-duplication: true
+2023-04-30T15:08:54.663Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] character-reference: true
+2023-04-30T15:08:54.663Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-attr: true
+2023-04-30T15:08:54.663Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-element: true
+2023-04-30T15:08:54.663Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] id-duplication: true
+2023-04-30T15:08:54.664Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] ineffective-attr: true
+2023-04-30T15:08:54.664Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] no-refer-to-non-existent-id: true
+2023-04-30T15:08:54.664Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] permitted-contents: true
+2023-04-30T15:08:54.664Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] placeholder-label-option: true
+2023-04-30T15:08:54.664Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-datetime: true
+2023-04-30T15:08:54.664Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-attr: true
+2023-04-30T15:08:54.664Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] invalid-attr: { options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] } }
+2023-04-30T15:08:54.664Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] label-has-control: true
+2023-04-30T15:08:54.664Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] landmark-roles: true
+2023-04-30T15:08:54.664Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-accessible-name: true
+2023-04-30T15:08:54.664Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-h1: true
+2023-04-30T15:08:54.664Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] use-list: true
+2023-04-30T15:08:54.664Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] wai-aria: true
+2023-04-30T15:08:54.665Z ml-core:rule-mapper:node <META>
+2023-04-30T15:08:54.665Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:08:54.665Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] attr-duplication: true
+2023-04-30T15:08:54.665Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] character-reference: true
+2023-04-30T15:08:54.665Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-attr: true
+2023-04-30T15:08:54.665Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-element: true
+2023-04-30T15:08:54.665Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] id-duplication: true
+2023-04-30T15:08:54.665Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] ineffective-attr: true
+2023-04-30T15:08:54.665Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] no-refer-to-non-existent-id: true
+2023-04-30T15:08:54.665Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] permitted-contents: true
+2023-04-30T15:08:54.665Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] placeholder-label-option: true
+2023-04-30T15:08:54.665Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-datetime: true
+2023-04-30T15:08:54.665Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-attr: true
+2023-04-30T15:08:54.666Z ml-core:rule-mapper:node:rule [from: nodeRules([ 0, 0, 0 ])] invalid-attr: { options: { disallowAttrs: [ 'disallowed', 'autofocus' ], allowAttrs: [ [Object] ] } }
+2023-04-30T15:08:54.666Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] label-has-control: true
+2023-04-30T15:08:54.666Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] landmark-roles: true
+2023-04-30T15:08:54.666Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-accessible-name: true
+2023-04-30T15:08:54.666Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-h1: true
+2023-04-30T15:08:54.666Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] use-list: true
+2023-04-30T15:08:54.666Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] wai-aria: true
+2023-04-30T15:08:54.666Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:08:54.666Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:08:54.666Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] attr-duplication: true
+2023-04-30T15:08:54.666Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] character-reference: true
+2023-04-30T15:08:54.666Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-attr: true
+2023-04-30T15:08:54.666Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-element: true
+2023-04-30T15:08:54.666Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] id-duplication: true
+2023-04-30T15:08:54.666Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] ineffective-attr: true
+2023-04-30T15:08:54.667Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] no-refer-to-non-existent-id: true
+2023-04-30T15:08:54.667Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] permitted-contents: true
+2023-04-30T15:08:54.667Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] placeholder-label-option: true
+2023-04-30T15:08:54.667Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-datetime: true
+2023-04-30T15:08:54.667Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-attr: true
+2023-04-30T15:08:54.667Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] invalid-attr: { options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] } }
+2023-04-30T15:08:54.667Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] label-has-control: true
+2023-04-30T15:08:54.667Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] landmark-roles: true
+2023-04-30T15:08:54.667Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-accessible-name: true
+2023-04-30T15:08:54.667Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-h1: true
+2023-04-30T15:08:54.667Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] use-list: true
+2023-04-30T15:08:54.667Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] wai-aria: true
+2023-04-30T15:08:54.667Z ml-core:rule-mapper:node <META>
+2023-04-30T15:08:54.667Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:08:54.668Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] attr-duplication: true
+2023-04-30T15:08:54.668Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] character-reference: true
+2023-04-30T15:08:54.668Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-attr: true
+2023-04-30T15:08:54.668Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-element: true
+2023-04-30T15:08:54.668Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] id-duplication: true
+2023-04-30T15:08:54.668Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] ineffective-attr: true
+2023-04-30T15:08:54.668Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] no-refer-to-non-existent-id: true
+2023-04-30T15:08:54.668Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] permitted-contents: true
+2023-04-30T15:08:54.668Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] placeholder-label-option: true
+2023-04-30T15:08:54.668Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-datetime: true
+2023-04-30T15:08:54.668Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-attr: true
+2023-04-30T15:08:54.668Z ml-core:rule-mapper:node:rule [from: nodeRules([ 0, 0, 0 ])] invalid-attr: { options: { disallowAttrs: [ 'disallowed', 'autofocus' ], allowAttrs: [ [Object] ] } }
+2023-04-30T15:08:54.668Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] label-has-control: true
+2023-04-30T15:08:54.668Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] landmark-roles: true
+2023-04-30T15:08:54.669Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-accessible-name: true
+2023-04-30T15:08:54.669Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-h1: true
+2023-04-30T15:08:54.669Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] use-list: true
+2023-04-30T15:08:54.669Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] wai-aria: true
+2023-04-30T15:08:54.669Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:08:54.669Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:08:54.669Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] attr-duplication: true
+2023-04-30T15:08:54.669Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] character-reference: true
+2023-04-30T15:08:54.669Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-attr: true
+2023-04-30T15:08:54.669Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-element: true
+2023-04-30T15:08:54.669Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] id-duplication: true
+2023-04-30T15:08:54.669Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] ineffective-attr: true
+2023-04-30T15:08:54.669Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] no-refer-to-non-existent-id: true
+2023-04-30T15:08:54.669Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] permitted-contents: true
+2023-04-30T15:08:54.670Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] placeholder-label-option: true
+2023-04-30T15:08:54.670Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-datetime: true
+2023-04-30T15:08:54.670Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-attr: true
+2023-04-30T15:08:54.670Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] invalid-attr: { options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] } }
+2023-04-30T15:08:54.670Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] label-has-control: true
+2023-04-30T15:08:54.670Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] landmark-roles: true
+2023-04-30T15:08:54.670Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-accessible-name: true
+2023-04-30T15:08:54.670Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-h1: true
+2023-04-30T15:08:54.670Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] use-list: true
+2023-04-30T15:08:54.670Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] wai-aria: true
+2023-04-30T15:08:54.670Z ml-core:rule-mapper:node <TITLE>
+2023-04-30T15:08:54.670Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:08:54.670Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] attr-duplication: true
+2023-04-30T15:08:54.671Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] character-reference: true
+2023-04-30T15:08:54.671Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-attr: true
+2023-04-30T15:08:54.671Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-element: true
+2023-04-30T15:08:54.671Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] id-duplication: true
+2023-04-30T15:08:54.671Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] ineffective-attr: true
+2023-04-30T15:08:54.671Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] no-refer-to-non-existent-id: true
+2023-04-30T15:08:54.671Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] permitted-contents: true
+2023-04-30T15:08:54.671Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] placeholder-label-option: true
+2023-04-30T15:08:54.671Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-datetime: true
+2023-04-30T15:08:54.671Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-attr: true
+2023-04-30T15:08:54.671Z ml-core:rule-mapper:node:rule [from: nodeRules([ 0, 0, 0 ])] invalid-attr: { options: { disallowAttrs: [ 'disallowed', 'autofocus' ], allowAttrs: [ [Object] ] } }
+2023-04-30T15:08:54.671Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] label-has-control: true
+2023-04-30T15:08:54.671Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] landmark-roles: true
+2023-04-30T15:08:54.672Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-accessible-name: true
+2023-04-30T15:08:54.672Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-h1: true
+2023-04-30T15:08:54.672Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] use-list: true
+2023-04-30T15:08:54.672Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] wai-aria: true
+2023-04-30T15:08:54.672Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:08:54.672Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:08:54.672Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] attr-duplication: true
+2023-04-30T15:08:54.672Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] character-reference: true
+2023-04-30T15:08:54.672Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-attr: true
+2023-04-30T15:08:54.672Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-element: true
+2023-04-30T15:08:54.672Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] id-duplication: true
+2023-04-30T15:08:54.672Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] ineffective-attr: true
+2023-04-30T15:08:54.672Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] no-refer-to-non-existent-id: true
+2023-04-30T15:08:54.672Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] permitted-contents: true
+2023-04-30T15:08:54.673Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] placeholder-label-option: true
+2023-04-30T15:08:54.673Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-datetime: true
+2023-04-30T15:08:54.673Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-attr: true
+2023-04-30T15:08:54.673Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] invalid-attr: { options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] } }
+2023-04-30T15:08:54.673Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] label-has-control: true
+2023-04-30T15:08:54.673Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] landmark-roles: true
+2023-04-30T15:08:54.673Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-accessible-name: true
+2023-04-30T15:08:54.673Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-h1: true
+2023-04-30T15:08:54.673Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] use-list: true
+2023-04-30T15:08:54.673Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] wai-aria: true
+2023-04-30T15:08:54.673Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:08:54.673Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:08:54.674Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] attr-duplication: true
+2023-04-30T15:08:54.674Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] character-reference: true
+2023-04-30T15:08:54.674Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-attr: true
+2023-04-30T15:08:54.674Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-element: true
+2023-04-30T15:08:54.674Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] id-duplication: true
+2023-04-30T15:08:54.674Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] ineffective-attr: true
+2023-04-30T15:08:54.674Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] no-refer-to-non-existent-id: true
+2023-04-30T15:08:54.674Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] permitted-contents: true
+2023-04-30T15:08:54.674Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] placeholder-label-option: true
+2023-04-30T15:08:54.674Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-datetime: true
+2023-04-30T15:08:54.674Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-attr: true
+2023-04-30T15:08:54.674Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] invalid-attr: { options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] } }
+2023-04-30T15:08:54.675Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] label-has-control: true
+2023-04-30T15:08:54.675Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] landmark-roles: true
+2023-04-30T15:08:54.675Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-accessible-name: true
+2023-04-30T15:08:54.675Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-h1: true
+2023-04-30T15:08:54.675Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] use-list: true
+2023-04-30T15:08:54.675Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] wai-aria: true
+2023-04-30T15:08:54.675Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:08:54.675Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:08:54.675Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] attr-duplication: true
+2023-04-30T15:08:54.675Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] character-reference: true
+2023-04-30T15:08:54.675Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-attr: true
+2023-04-30T15:08:54.675Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-element: true
+2023-04-30T15:08:54.675Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] id-duplication: true
+2023-04-30T15:08:54.675Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] ineffective-attr: true
+2023-04-30T15:08:54.676Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] no-refer-to-non-existent-id: true
+2023-04-30T15:08:54.676Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] permitted-contents: true
+2023-04-30T15:08:54.676Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] placeholder-label-option: true
+2023-04-30T15:08:54.676Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-datetime: true
+2023-04-30T15:08:54.676Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-attr: true
+2023-04-30T15:08:54.676Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] invalid-attr: { options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] } }
+2023-04-30T15:08:54.676Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] label-has-control: true
+2023-04-30T15:08:54.676Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] landmark-roles: true
+2023-04-30T15:08:54.676Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-accessible-name: true
+2023-04-30T15:08:54.676Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-h1: true
+2023-04-30T15:08:54.676Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] use-list: true
+2023-04-30T15:08:54.676Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] wai-aria: true
+2023-04-30T15:08:54.676Z ml-core:rule-mapper:node <BODY>
+2023-04-30T15:08:54.676Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:08:54.677Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] attr-duplication: true
+2023-04-30T15:08:54.677Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] character-reference: true
+2023-04-30T15:08:54.677Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-attr: true
+2023-04-30T15:08:54.677Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-element: true
+2023-04-30T15:08:54.677Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] id-duplication: true
+2023-04-30T15:08:54.677Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] ineffective-attr: true
+2023-04-30T15:08:54.677Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] no-refer-to-non-existent-id: true
+2023-04-30T15:08:54.677Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] permitted-contents: true
+2023-04-30T15:08:54.677Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] placeholder-label-option: true
+2023-04-30T15:08:54.677Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-datetime: true
+2023-04-30T15:08:54.677Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-attr: true
+2023-04-30T15:08:54.677Z ml-core:rule-mapper:node:rule [from: nodeRules([ 0, 0, 0 ])] invalid-attr: { options: { disallowAttrs: [ 'disallowed', 'autofocus' ], allowAttrs: [ [Object] ] } }
+2023-04-30T15:08:54.677Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] label-has-control: true
+2023-04-30T15:08:54.677Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] landmark-roles: true
+2023-04-30T15:08:54.678Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-accessible-name: true
+2023-04-30T15:08:54.678Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-h1: true
+2023-04-30T15:08:54.678Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] use-list: true
+2023-04-30T15:08:54.678Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] wai-aria: true
+2023-04-30T15:08:54.678Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:08:54.678Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:08:54.678Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] attr-duplication: true
+2023-04-30T15:08:54.678Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] character-reference: true
+2023-04-30T15:08:54.678Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-attr: true
+2023-04-30T15:08:54.678Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-element: true
+2023-04-30T15:08:54.678Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] id-duplication: true
+2023-04-30T15:08:54.678Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] ineffective-attr: true
+2023-04-30T15:08:54.678Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] no-refer-to-non-existent-id: true
+2023-04-30T15:08:54.678Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] permitted-contents: true
+2023-04-30T15:08:54.678Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] placeholder-label-option: true
+2023-04-30T15:08:54.678Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-datetime: true
+2023-04-30T15:08:54.679Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-attr: true
+2023-04-30T15:08:54.679Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] invalid-attr: { options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] } }
+2023-04-30T15:08:54.679Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] label-has-control: true
+2023-04-30T15:08:54.679Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] landmark-roles: true
+2023-04-30T15:08:54.679Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-accessible-name: true
+2023-04-30T15:08:54.679Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-h1: true
+2023-04-30T15:08:54.679Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] use-list: true
+2023-04-30T15:08:54.679Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] wai-aria: true
+2023-04-30T15:08:54.679Z ml-core:rule-mapper:node <H2>
+2023-04-30T15:08:54.679Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:08:54.679Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] attr-duplication: true
+2023-04-30T15:08:54.679Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] character-reference: true
+2023-04-30T15:08:54.679Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-attr: true
+2023-04-30T15:08:54.679Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-element: true
+2023-04-30T15:08:54.680Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] id-duplication: true
+2023-04-30T15:08:54.680Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] ineffective-attr: true
+2023-04-30T15:08:54.680Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] no-refer-to-non-existent-id: true
+2023-04-30T15:08:54.680Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] permitted-contents: true
+2023-04-30T15:08:54.680Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] placeholder-label-option: true
+2023-04-30T15:08:54.680Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-datetime: true
+2023-04-30T15:08:54.680Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-attr: true
+2023-04-30T15:08:54.680Z ml-core:rule-mapper:node:rule [from: nodeRules([ 0, 0, 0 ])] invalid-attr: { options: { disallowAttrs: [ 'disallowed', 'autofocus' ], allowAttrs: [ [Object] ] } }
+2023-04-30T15:08:54.680Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] label-has-control: true
+2023-04-30T15:08:54.680Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] landmark-roles: true
+2023-04-30T15:08:54.680Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-accessible-name: true
+2023-04-30T15:08:54.680Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-h1: true
+2023-04-30T15:08:54.680Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] use-list: true
+2023-04-30T15:08:54.681Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] wai-aria: true
+2023-04-30T15:08:54.681Z ml-core:rule-mapper:node:rule [from: nodeRules([ 0, 0, 1 ])] disallowed-element: { value: [ 'small' ], reason: 'The small element must not be used for subheadings. https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-small-element' }
+2023-04-30T15:08:54.681Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:08:54.681Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:08:54.681Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] attr-duplication: true
+2023-04-30T15:08:54.681Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] character-reference: true
+2023-04-30T15:08:54.681Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-attr: true
+2023-04-30T15:08:54.681Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-element: true
+2023-04-30T15:08:54.681Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] id-duplication: true
+2023-04-30T15:08:54.681Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] ineffective-attr: true
+2023-04-30T15:08:54.681Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] no-refer-to-non-existent-id: true
+2023-04-30T15:08:54.681Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] permitted-contents: true
+2023-04-30T15:08:54.682Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] placeholder-label-option: true
+2023-04-30T15:08:54.682Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-datetime: true
+2023-04-30T15:08:54.682Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-attr: true
+2023-04-30T15:08:54.682Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] invalid-attr: { options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] } }
+2023-04-30T15:08:54.682Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] label-has-control: true
+2023-04-30T15:08:54.682Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] landmark-roles: true
+2023-04-30T15:08:54.682Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-accessible-name: true
+2023-04-30T15:08:54.682Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-h1: true
+2023-04-30T15:08:54.682Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] use-list: true
+2023-04-30T15:08:54.682Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] wai-aria: true
+2023-04-30T15:08:54.682Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:08:54.682Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:08:54.682Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] attr-duplication: true
+2023-04-30T15:08:54.683Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] character-reference: true
+2023-04-30T15:08:54.683Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-attr: true
+2023-04-30T15:08:54.683Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-element: true
+2023-04-30T15:08:54.683Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] id-duplication: true
+2023-04-30T15:08:54.683Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] ineffective-attr: true
+2023-04-30T15:08:54.683Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] no-refer-to-non-existent-id: true
+2023-04-30T15:08:54.683Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] permitted-contents: true
+2023-04-30T15:08:54.683Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] placeholder-label-option: true
+2023-04-30T15:08:54.683Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-datetime: true
+2023-04-30T15:08:54.683Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-attr: true
+2023-04-30T15:08:54.683Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] invalid-attr: { options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] } }
+2023-04-30T15:08:54.683Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] label-has-control: true
+2023-04-30T15:08:54.683Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] landmark-roles: true
+2023-04-30T15:08:54.684Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-accessible-name: true
+2023-04-30T15:08:54.684Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-h1: true
+2023-04-30T15:08:54.684Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] use-list: true
+2023-04-30T15:08:54.684Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] wai-aria: true
+2023-04-30T15:08:54.684Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:08:54.684Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:08:54.684Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] attr-duplication: true
+2023-04-30T15:08:54.684Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] character-reference: true
+2023-04-30T15:08:54.684Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-attr: true
+2023-04-30T15:08:54.684Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-element: true
+2023-04-30T15:08:54.684Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] id-duplication: true
+2023-04-30T15:08:54.684Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] ineffective-attr: true
+2023-04-30T15:08:54.684Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] no-refer-to-non-existent-id: true
+2023-04-30T15:08:54.685Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] permitted-contents: true
+2023-04-30T15:08:54.685Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] placeholder-label-option: true
+2023-04-30T15:08:54.685Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-datetime: true
+2023-04-30T15:08:54.685Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-attr: true
+2023-04-30T15:08:54.685Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] invalid-attr: { options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] } }
+2023-04-30T15:08:54.685Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] label-has-control: true
+2023-04-30T15:08:54.685Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] landmark-roles: true
+2023-04-30T15:08:54.685Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-accessible-name: true
+2023-04-30T15:08:54.685Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-h1: true
+2023-04-30T15:08:54.685Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] use-list: true
+2023-04-30T15:08:54.685Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] wai-aria: true
+2023-04-30T15:08:54.685Z ml-core:rule-mapper:node <#text>
+2023-04-30T15:08:54.685Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] doctype: true
+2023-04-30T15:08:54.685Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] attr-duplication: true
+2023-04-30T15:08:54.685Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] character-reference: true
+2023-04-30T15:08:54.686Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-attr: true
+2023-04-30T15:08:54.686Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] deprecated-element: true
+2023-04-30T15:08:54.686Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] id-duplication: true
+2023-04-30T15:08:54.686Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] ineffective-attr: true
+2023-04-30T15:08:54.686Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] no-refer-to-non-existent-id: true
+2023-04-30T15:08:54.686Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] permitted-contents: true
+2023-04-30T15:08:54.686Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] placeholder-label-option: true
+2023-04-30T15:08:54.686Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-datetime: true
+2023-04-30T15:08:54.686Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-attr: true
+2023-04-30T15:08:54.686Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] invalid-attr: { options: { disallowAttrs: [ 'disallowed' ], allowAttrs: [ [Object] ] } }
+2023-04-30T15:08:54.686Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] label-has-control: true
+2023-04-30T15:08:54.686Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] landmark-roles: true
+2023-04-30T15:08:54.686Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] require-accessible-name: true
+2023-04-30T15:08:54.687Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] required-h1: true
+2023-04-30T15:08:54.687Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] use-list: true
+2023-04-30T15:08:54.687Z ml-core:rule-mapper:node:rule [from: rules([ 0, 0, 0 ])] wai-aria: true
+2023-04-30T15:08:54.687Z ml-core verify: start
+2023-04-30T15:08:54.687Z ml-core attr-duplication Rule: verify
+2023-04-30T15:08:54.690Z ml-core attr-duplication Rule: verify end
+2023-04-30T15:08:54.690Z ml-core character-reference Rule: verify
+2023-04-30T15:08:54.691Z ml-core character-reference Rule: verify end
+2023-04-30T15:08:54.691Z ml-core deprecated-attr Rule: verify
+2023-04-30T15:08:54.692Z ml-core deprecated-attr Rule: verify end
+2023-04-30T15:08:54.693Z ml-core deprecated-element Rule: verify
+2023-04-30T15:08:54.693Z ml-core deprecated-element Rule: verify end
+2023-04-30T15:08:54.693Z ml-core disallowed-element Rule: verify
+2023-04-30T15:08:54.694Z ml-core disallowed-element Rule: verify end
+2023-04-30T15:08:54.694Z ml-core doctype Rule: verify
+2023-04-30T15:08:54.694Z ml-core doctype Rule: verify end
+2023-04-30T15:08:54.694Z ml-core id-duplication Rule: verify
+2023-04-30T15:08:54.695Z ml-core id-duplication Rule: verify end
+2023-04-30T15:08:54.695Z ml-core ineffective-attr Rule: verify
+2023-04-30T15:08:54.695Z ml-core ineffective-attr Rule: verify end
+2023-04-30T15:08:54.695Z ml-core invalid-attr Rule: verify
+2023-04-30T15:08:54.698Z ml-core invalid-attr Rule: verify end
+2023-04-30T15:08:54.698Z ml-core label-has-control Rule: verify
+2023-04-30T15:08:54.699Z ml-core label-has-control Rule: verify end
+2023-04-30T15:08:54.699Z ml-core landmark-roles Rule: verify
+2023-04-30T15:08:54.702Z ml-core landmark-roles Rule: verify end
+2023-04-30T15:08:54.702Z ml-core no-refer-to-non-existent-id Rule: verify
+2023-04-30T15:08:54.704Z ml-core no-refer-to-non-existent-id Rule: verify end
+2023-04-30T15:08:54.704Z ml-core permitted-contents Rule: verify
+2023-04-30T15:08:54.713Z ml-core permitted-contents Rule: verify end
+2023-04-30T15:08:54.713Z ml-core placeholder-label-option Rule: verify
+2023-04-30T15:08:54.714Z ml-core placeholder-label-option Rule: verify end
+2023-04-30T15:08:54.714Z ml-core require-accessible-name Rule: verify
+2023-04-30T15:08:54.725Z ml-core require-accessible-name Rule: verify end
+2023-04-30T15:08:54.725Z ml-core require-datetime Rule: verify
+2023-04-30T15:08:54.725Z ml-core require-datetime Rule: verify end
+2023-04-30T15:08:54.725Z ml-core required-attr Rule: verify
+2023-04-30T15:08:54.732Z ml-core required-attr Rule: verify end
+2023-04-30T15:08:54.732Z ml-core required-element Rule: verify
+2023-04-30T15:08:54.733Z ml-core required-element Rule: verify end
+2023-04-30T15:08:54.733Z ml-core required-h1 Rule: verify
+2023-04-30T15:08:54.733Z ml-core required-h1 Rule: verify end
+2023-04-30T15:08:54.733Z ml-core use-list Rule: verify
+2023-04-30T15:08:54.734Z ml-core use-list Rule: verify end
+2023-04-30T15:08:54.734Z ml-core wai-aria Rule: verify
+2023-04-30T15:08:54.736Z ml-core wai-aria Rule: verify end
+2023-04-30T15:08:54.736Z ml-core:result Error: 2
+2023-04-30T15:08:54.737Z ml-core:result Warning: 0
+2023-04-30T15:08:54.737Z ml-core:result Info: 0
+2023-04-30T15:08:54.737Z ml-core verify: end
+2023-04-30T15:08:54.738Z markuplint-cli:ml-engine exec: end
+2023-04-30T15:08:54.738Z markuplint-cli Output reports
+<markup[38;5;33mlint[39m> [31merror: Require doctype (doctype) [4m/workspaces/markuplint-test/test.html:1:1[24m[39m
+  [36m1[39m: [41m[49m<html[38;5;8m•[39mlang="en">
+  [36m2[39m: 
+<markup[38;5;33mlint[39m> [31merror: Require the "h1" element (required-h1) [4m/workspaces/markuplint-test/test.html:1:1[24m[39m
+  [36m1[39m: [41m<[49mhtml[38;5;8m•[39mlang="en">
+  [36m2[39m: 

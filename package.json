@@ -1,0 +1,14 @@
+{
+  "name": "markuplint-test",
+  "version": "0.1.0",
+  "scripts": {
+    "lint": "markuplint test.html",
+    "lintn": "markuplint --no-search-config test.html",
+    "lintv": "markuplint --verbose test.html",
+    "lintnv": "markuplint --no-search-config --verbose test.html"
+  },
+  "license": "CC0 1.0",
+  "devDependencies": {
+    "markuplint": "3.9.0"
+  }
+}
